@@ -87,7 +87,4 @@ public class UsuarioLogin {
 		this.tipo = tipo;
 	}
 	
-	
-	
-	
 }
