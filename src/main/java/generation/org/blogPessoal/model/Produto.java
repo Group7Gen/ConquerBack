@@ -20,12 +20,15 @@ public class Produto {
 	private long id;
 	
 	@NotNull
-	@Size(min = 5, max = 100)
+	@Size(min = 2, max = 100)
 	private String curso;
 	
 	@NotNull
-	@Size(min = 10, max = 500)
+	@Size(min = 2, max = 500)
 	private String descricao;	
+	
+	private String preco;
+	
 	
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
@@ -73,6 +76,14 @@ public class Produto {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+
+	public String getPreco() {
+		return preco;
+	}
+
+	public void setPreco(String preco) {
+		this.preco = preco;
 	}
 	
 }
