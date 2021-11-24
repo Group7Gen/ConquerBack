@@ -27,8 +27,7 @@ public class Produto {
 	@Size(min = 2, max = 500)
 	private String descricao;	
 	
-	private String preco;
-	
+	private double preco;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
@@ -78,12 +77,11 @@ public class Produto {
 		this.usuario = usuario;
 	}
 
-	public String getPreco() {
+	public double getPreco() {
 		return preco;
 	}
 
-	public void setPreco(String preco) {
+	public void setPreco(double preco) {
 		this.preco = preco;
 	}
-	
 }
